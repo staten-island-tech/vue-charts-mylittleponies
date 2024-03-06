@@ -1,6 +1,7 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import BarChart from './components/BarChart.vue'
 </script>
 
 <template>
@@ -11,11 +12,19 @@ import TheWelcome from './components/TheWelcome.vue'
       <HelloWorld msg="You did it!" />
     </div>
   </header>
-
+  <BarChart />
   <main>
     <TheWelcome />
   </main>
 </template>
+
+<script>
+
+export default {
+  name: 'App',
+  components: { BarChart }
+}
+</script>
 
 <style scoped>
 header {
