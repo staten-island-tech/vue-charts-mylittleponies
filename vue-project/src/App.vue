@@ -1,6 +1,6 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+// import TheWelcome from './components/PieGraph.vue
 import BarChart from './components/BarChart.vue'
 </script>
 
@@ -16,10 +16,11 @@ import BarChart from './components/BarChart.vue'
   <main>
     <TheWelcome />
   </main>
-  <div class="wrapper">
-      <RouterView />
-
-    </div>
+  <nav class="wrapper">
+      <RouterLink to="/BarChart">Bar</RouterLink>
+      <RouterLink to="/HelloWorld">Pp</RouterLink>
+      <RouterLink to="/PieGraph">Pie</RouterLink>
+  </nav>
 </template>
 
 <script>
