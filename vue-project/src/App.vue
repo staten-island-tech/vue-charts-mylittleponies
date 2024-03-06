@@ -16,6 +16,10 @@ import BarChart from './components/BarChart.vue'
   <main>
     <TheWelcome />
   </main>
+  <div class="wrapper">
+      <RouterView />
+
+    </div>
 </template>
 
 <script>
