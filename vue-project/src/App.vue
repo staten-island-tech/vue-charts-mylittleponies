@@ -10,17 +10,15 @@ import BarChart from './components/BarChart.vue'
 
     <div class="wrapper">
       <HelloWorld msg="2022 SHSAT Data" />
+      <nav class="wrapper">
+      <RouterLink to="/about">About</RouterLink>
+      <RouterLink to="/chart">Chart</RouterLink>
+      <RouterLink to="/pie">Pie</RouterLink>
+  </nav>
     </div>
   </header>
-  <BarChart />
-  <main>
-    <TheWelcome />
-  </main>
-  <nav class="wrapper">
-      <RouterLink to="/BarChart">Bar</RouterLink>
-      <RouterLink to="/HelloWorld">Pp</RouterLink>
-      <RouterLink to="/PieGraph">Pie</RouterLink>
-  </nav>
+
+  <RouterView />
 </template>
 
 <script>
