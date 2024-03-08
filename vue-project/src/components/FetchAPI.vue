@@ -14,6 +14,8 @@ async function getScores() {
 onMounted(() => {
     getScores();
 });
+
+
 </script>
 
 
