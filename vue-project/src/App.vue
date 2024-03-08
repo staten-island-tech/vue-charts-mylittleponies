@@ -2,6 +2,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 // import TheWelcome from './components/PieGraph.vue
 import BarChart from './components/BarChart.vue'
+import PieGraph from './components/PieGraph.vue';
 </script>
 
 <template>
@@ -27,6 +28,7 @@ export default {
   name: 'App',
   components: { BarChart }
 }
+
 </script>
 
 <style scoped>
