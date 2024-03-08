@@ -3,13 +3,10 @@
 </template>
 
 <script setup>
-
-const URL = "https://data.cityofnewyork.us/resource/unse-x4pq.json"
-
 import {ref, onMounted} from "vue";
 const scores = ref("");
 async function getScores() {
-    let res = await fetch(URL);
+    let res = await fetch("https://data.cityofnewyork.us/resource/unse-x4pq.json");
     let data = await res.json();
     scores.value = data;
 }
@@ -17,9 +14,6 @@ async function getScores() {
 onMounted(() => {
     getScores();
 });
-
-console.log(data)
-
 </script>
 
 
