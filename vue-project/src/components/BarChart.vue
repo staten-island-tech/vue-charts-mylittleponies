@@ -5,29 +5,23 @@
 </template>
 
 <script>
-import { Bar } from 'vue-chartjs'
+import { Bar } from 'vue-chartjs';
+import {ref, onMounted} from "vue";
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
-export default {
-  name: 'BarChart',
-  components: { Bar },
-  data: () => ({
-    loaded: false,
-    chartData: []
-  }),
-  async mounted () {
-    this.loaded = false
+let chartData = null;
+const loaded = ref(false);
 
-    try {
-      const { userlist } = await fetch("https://data.cityofnewyork.us/resource/unse-x4pq.json")
-      this.chartdata = userlist
-
-      this.loaded = true
-    } catch (e) {
-      console.error(e)
-    }
+onMounted(async()=> {
+  try{
+    let res = await fetch("https://data.cityofnewyork.us/resource/unse-x4pq.json");
+    chartData = await res.json();
   }
-}
+  catch(error) {
+    console.log(error)
+  } 
+})
+
 </script>
