@@ -11,13 +11,19 @@ import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, Li
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
-let chartData = null;
-const loaded = ref(false);
+
+export default {
+  name: 'BarChart',
+  components: { Bar },
+  data: () => ({
+    loaded: false,
+    chartData: null,
+  }),}
 
 onMounted(async()=> {
   try{
     let res = await fetch("https://data.cityofnewyork.us/resource/unse-x4pq.json");
-    chartData = await res.json();
+    chartData = res.json();
   }
   catch(error) {
     console.log(error)
