@@ -38,18 +38,25 @@ async function displayChart() {
 }
 displayChart()
 
-const config = {
-  type: 'bar',
-  data,
-  options: {
-    scales:{
-      y:{
-        beginAtZero: true
-      }
-    }
-  }
+// const config = {
+//   type: 'bar',
+//   data,
+//   options: {
+//     scales:{
+//       y:{
+//         beginAtZero: true
+//       }
+//     }
+//   }
   
-};
+// };
+
+// const myChart = new Chart(
+//   document.getElementById('myChart'),
+//   config
+// )
+
+// myChart()
 
 
 
