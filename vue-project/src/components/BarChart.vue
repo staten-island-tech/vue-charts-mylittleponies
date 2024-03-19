@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Bar v-if="loaded" :data="chartData" />
+    <!-- <Bar v-if="loaded" :data="chartData" /> -->
   </div>
 </template>
 
@@ -11,26 +11,26 @@ import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, Li
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
-export default {
-  name: 'BarChart',
-  components: { Bar },
-  data: () => ({
-    loaded: false,
-    chartData: []
-  }),
-  async mounted () {
-    this.loaded = false
+// export default {
+//   name: 'BarChart',
+//   components: { Bar },
+//   data: () => ({
+//     loaded: false,
+//     chartData: []
+//   }),
+//   async mounted () {
+//     this.loaded = false
 
-    try {
-      const { userlist } = await fetch('https://data.cityofnewyork.us/resource/unse-x4pq.json')
-      this.chartdata = userlist
-      this.loaded = true
+//     try {
+//       const { userlist } = await fetch('https://data.cityofnewyork.us/resource/unse-x4pq.json')
+//       this.chartdata = userlist
+//       this.loaded = true
 
-    } catch (e) {
-      console.error(e)
-    }
-  }
-}
+//     } catch (e) {
+//       console.error(e)
+//     }
+//   }
+// }
 
 async function apiData(){
   const URL = "https://data.cityofnewyork.us/resource/unse-x4pq.json";
