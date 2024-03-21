@@ -8,12 +8,9 @@ import PieChart from './components/PieGraph.vue'
 </template>
 
 <script>
+
 export default {
   name: 'App',
   components: { PieChart }
 }
 </script>
-
-<style>
-
-</style>
