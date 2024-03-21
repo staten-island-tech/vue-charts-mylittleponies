@@ -2,8 +2,10 @@
   <Pie :data="pieData" :options="pieOptions"/>
 </template>
 
-<script lang ="ts">
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
+
+
+<script>
+import {Bar} from 
 import { Pie } from 'vue-chartjs'
 import * as chartConfig from './chartConfig.js'
 
