@@ -1,15 +1,41 @@
 <template>
   <div class="container">
-    <!-- <Bar v-if="loaded" :data="chartData" /> -->
+  <Bar
+  id="my-chart-id"
+  :options="chartOptions"
+  :data="chartData"
+  />
   </div>
 </template>
 
 <script>
-import { Bar } from 'vue-chartjs';
-// import {ref, onMounted} from "vue";
+import { Bar } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
-
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
+export default {
+  name: 'BarChart',
+  components: { Pie },
+  data() {
+    let x= 0
+    let y= 1
+    let z= 2
+
+    return {
+      chartData: {
+        labels: [a, b, c],
+        datasets: [{ x, y, z }],
+
+      },
+      chartOptions: {
+        responsive: true
+      }
+    }
+
+
+
+
+  }
+}
 
 // export default {
 //   name: 'BarChart',
