@@ -16,5 +16,3 @@ export default {
   components: { PieChart }
 }
 </script>
-
-<style>
