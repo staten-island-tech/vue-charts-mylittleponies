@@ -19,7 +19,7 @@ export default {
   data() {
     return {
         pieData: {
-        labels: ['SITech', 'Stuy', 'Bronx Sci', 'Brooklyn Tech'],
+        labels: ['VueJs', 'EmberJs', 'ReactJs', 'AngularJs'],
         datasets: [{ backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
         data: [40, 20, 80, 10] } ]
     },
@@ -32,5 +32,4 @@ export default {
 </script>
 
 <style>
-
 </style>
