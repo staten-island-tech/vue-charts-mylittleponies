@@ -1,4 +1,4 @@
-<!-- <!-- <template>
+<template>
   <div class="container">
   <Bar
   id="my-chart-id"
@@ -6,7 +6,7 @@
   :data="chartData"
   />
   </div>
-</template> -->
+</template>
 
 <script>
 import { Bar } from 'vue-chartjs'
@@ -14,7 +14,7 @@ import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, Li
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 export default {
   name: 'BarChart',
-  // components: { Pie },
+  components: { Pie },
   data() {
     let x= 0
     let y= 1
@@ -30,14 +30,14 @@ export default {
         responsive: true
       }
     }
- -->
 
 
-<!-- 
+
+
   }
-} -->
+}
 
-<!-- // export default {
+// export default {
 //   name: 'BarChart',
 //   components: { Bar },
 //   data: () => ({
@@ -58,14 +58,14 @@ export default {
 //   }
 // }
 
-// async function apiData(){
-//   const URL = "https://data.cityofnewyork.us/resource/unse-x4pq.json";
+async function apiData(){
+  const URL = "https://data.cityofnewyork.us/resource/unse-x4pq.json";
 
-//   const response = await fetch(URL)
-//   const dataPoints = await response.json()
-//   console.log(dataPoints)
-// }
-// apiData()
+  const response = await fetch(URL)
+  const dataPoints = await response.json()
+  console.log(dataPoints)
+}
+apiData()
 
 // export default {
 //   name: 'BarChart',
@@ -139,6 +139,6 @@ export default {
 //   catch(error) {
 //     console.log(error)
 //   } 
-// }) -->
+// })
 
-<!-- </script> -->
+</script>
