@@ -4,6 +4,7 @@ import BarChart from './components/BarChart.vue'
 
 
 <template>
+<button @click="showDropDown = !showDropDown">Change</button>
  <h2> </h2>
  <BarChart></BarChart>
 
