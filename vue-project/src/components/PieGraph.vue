@@ -1,5 +1,7 @@
 <template>
+  <div class="pies">
   <Pie :data="pieData" :options="pieOptions"/>
+  </div>
 </template>
 
 
@@ -22,6 +24,7 @@ export default {
     },
     pieOptions: {
     responsive: true,
+    maintainAspectRatio: true,
     }
     }
   },
@@ -29,4 +32,15 @@ export default {
 </script>
 
 <style>
+
+.pies-container {
+  margin: auto;
+  width: 800px;
+}
+
+.pies-container {
+  width: 400px;
+  float: left;
+}
+
 </style>

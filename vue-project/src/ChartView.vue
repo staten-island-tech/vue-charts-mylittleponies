@@ -5,7 +5,7 @@ import BarChart from './components/BarChart.vue'
 
 <template>
  <h2> </h2>
- <BarChart />
+ <BarChart></BarChart>
 
 
 </template>
