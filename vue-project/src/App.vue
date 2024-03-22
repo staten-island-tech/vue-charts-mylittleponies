@@ -2,7 +2,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 // import TheWelcome from './components/PieGraph.vue
 import BarChart from './components/BarChart.vue'
-import PieGraph from './components/PieGraph.vue';
+import PieChart from './components/PieGraph.vue';
 </script>
 
 <template>
@@ -26,7 +26,7 @@ import PieGraph from './components/PieGraph.vue';
 
 export default {
   name: 'App',
-  components: { BarChart }
+  components: { PieChart }
 }
 
 </script>
