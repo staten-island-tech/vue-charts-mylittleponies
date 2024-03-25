@@ -18,8 +18,8 @@ export default {
   data() {
     return {
         pieData: {
-        labels: ['VueJs', 'EmberJs', 'ReactJs', 'AngularJs'],
-        datasets: [{ backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
+        labels: ['Native American','Asian', 'White', 'Black', 'Latinx', 'Multi-Racial'],
+        datasets: [{ backgroundColor: ['#fb6f92', '#ff8fab', '#ffb3c6', '#ffc2d1', '#ffe5ec'],
         data: [40, 20, 80, 10] } ]
     },
     pieOptions: {
