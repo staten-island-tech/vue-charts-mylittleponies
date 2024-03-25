@@ -7,10 +7,10 @@ import PieChart from './components/PieGraph.vue';
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="/kawaii.JPG?url" width="200" height="220" />
+    <img alt="Vue logo" class="logo" src="/KawaiiDesu.png?url" width="200" height="220" />
 
     <div class="wrapper">
-      <HelloWorld msg="2022 SHSAT Data" />
+      <HelloWorld msg="アリガトウ" />
       <nav class="wrapper">
       <RouterLink to="/about">About</RouterLink>
       <RouterLink to="/chart">Chart</RouterLink>
