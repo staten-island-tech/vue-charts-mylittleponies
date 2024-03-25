@@ -13,8 +13,8 @@ import PieChart from './components/PieGraph.vue';
       <HelloWorld msg="アリガトウ" />
       <nav class="wrapper">
       <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/chart">Chart</RouterLink>
-      <RouterLink to="/pie">Pie</RouterLink>
+      <RouterLink to="/chart">Score</RouterLink>
+      <RouterLink to="/pie">Demographics</RouterLink>
   </nav>
     </div>
   </header>
@@ -42,17 +42,17 @@ header {
 }
 
 .wrapper a.router-link-exact-active {
-  color: var(--color-text);
+  color: #EA4C89;
 }
 
 .wrapper a.router-link-exact-active:hover {
-  background-color: transparent;
+  background-color: black;
 }
 
 .wrapper a {
   display: inline-block;
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  border-left: 1px solid black;
 }
 
 .wrapper a:first-of-type {
