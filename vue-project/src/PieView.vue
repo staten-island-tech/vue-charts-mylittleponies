@@ -5,9 +5,10 @@ import PieChart from './components/PieGraph.vue'
 <template>
 <button class="button-2" @click="showDropDown = !showDropDown">Change</button>
 <div id="myDropdown" class="dropdown-content" v-if="showDropDown">
-        <a><li> Hehe </li></a>
-        <a><li> Meow </li></a>
-        <a><li> Hi </li></a>
+        <a class="dropDown"><li> Hispanic </li></a>
+        <a class="dropDown"><li> White Non-Hispanic </li></a>
+        <a class="dropDown"><li> Black Non-Hispanic </li></a>
+        <a class="dropDown"><li> Asian & Pacific Islander </li></a>
       </div>
 <PieChart></PieChart>
 </template>
@@ -31,6 +32,9 @@ export default {
 </script>
 
 <style>
+
+
+
 button{
     width: 70px;
     height: 30px;
@@ -40,6 +44,10 @@ li{
     font-size: 20px;
     display: flex;
     
+}
+
+.dropDown{
+  line-height: 20px;
 }
 
 .button-2 {
@@ -64,3 +72,5 @@ li{
   background-color: #F082AC;
 }
 </style>
+
+

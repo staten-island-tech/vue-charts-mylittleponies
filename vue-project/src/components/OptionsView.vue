@@ -16,7 +16,7 @@
         fetchData: async function () {
             try {
                 const result = await fetch(
-                    `https://data.cityofnewyork.us/resource/unse-x4pq.jsonlimit=${this.id}&offset=${this.offset}`
+                    `https://data.cityofnewyork.us/resource/25th-nujf.json?$query=SELECT%20brth_yr%2C%20gndr%2C%20ethcty%2C%20nm%2C%20cnt%2C%20rnklimit=${this.id}&offset=${this.offset}`
                 );
                 const data = await result.json();
                 this.scores = data.results;
