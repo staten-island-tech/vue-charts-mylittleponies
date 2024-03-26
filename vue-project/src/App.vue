@@ -13,8 +13,8 @@ import PieChart from './components/PieGraph.vue';
       <HelloWorld msg="アリガトウ" />
       <nav class="wrapper">
       <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/chart">Score</RouterLink>
-      <RouterLink to="/pie">Demographics</RouterLink>
+      <RouterLink to="/chart">Most Common Names</RouterLink>
+      <RouterLink to="/pie">Names by Race</RouterLink>
   </nav>
     </div>
   </header>
