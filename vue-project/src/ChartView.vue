@@ -5,7 +5,10 @@ import BarChart from './components/BarChart.vue'
 
 <template>
 <button class="button-1" @click="showDropDown = !showDropDown">Change</button>
- <h2> </h2>
+<div id="myDropdown" class="dropdown-content" v-if="showDropDown">
+        <a><li> Female </li></a>
+        <a><li> Male </li></a>
+      </div>
  <BarChart></BarChart>
 
 
@@ -14,8 +17,16 @@ import BarChart from './components/BarChart.vue'
 <script>
 export default {
   name: 'App',
-  components: { BarChart }
+  components: { BarChart },
+
+  
+  data() {
+    return {
+      showDropDown: false
+    }
+  }
 }
+
 </script>
 
 <style>
