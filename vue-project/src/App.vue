@@ -15,7 +15,6 @@ import PieChart from './components/PieGraph.vue';
       <RouterLink to="/about">About</RouterLink>
       <RouterLink to="/chart">Most Common Names</RouterLink>
       <RouterLink to="/pie">Names by Race</RouterLink>
-      <RouterLink to="/generator">Name Generator</RouterLink>
   </nav>
     </div>
   </header>
