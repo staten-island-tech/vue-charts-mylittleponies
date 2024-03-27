@@ -67,8 +67,8 @@ li{
   transition: color 100ms;
 }
 
-.button-1:hover,
-.button-1:focus {
+.button-2:hover,
+.button-2:focus {
   background-color: #F082AC;
 }
 </style>

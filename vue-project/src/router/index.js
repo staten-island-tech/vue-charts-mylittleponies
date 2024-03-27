@@ -22,6 +22,11 @@ const router = createRouter({
         name: 'pie',
         component: () => import('../PieView.vue')
       },
+      {
+        path: '/generator',
+        name: 'generator',
+        component: () => import('../views/NameView.vue')
+      },
   ]
 })
 
