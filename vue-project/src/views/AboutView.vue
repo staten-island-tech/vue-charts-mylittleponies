@@ -1,5 +1,8 @@
 <template>
-<h2> This is a work in progress, have mercy meow. </h2>
+<h2> ネーム </h2>
+<div>
+<p> name - the core of one's identity</p>
+</div>
 </template>
 
 <script setup>
@@ -21,6 +24,9 @@ onMounted(() => {
 
 <style>
 h2{
+    justify-content: center;
+}
+p{
     justify-content: center;
 }
 </style>
