@@ -22,9 +22,14 @@ export default {
   
   data() {
     return {
-      showDropDown: false
+      showDropDown: false,
+      // loaded: false,
     }
-  }
+  },
+
+  // mounted: function(){
+  //   this.fetchData();
+  // }
 }
 
 </script>
