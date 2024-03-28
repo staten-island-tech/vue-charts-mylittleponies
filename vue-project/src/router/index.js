@@ -22,6 +22,11 @@ const router = createRouter({
         name: 'pie',
         component: () => import('../PieView.vue')
       },
+      {
+      path: '/data',
+      name: 'data',
+      component: () => import('../DataView.vue')
+    },
   ]
 })
 
