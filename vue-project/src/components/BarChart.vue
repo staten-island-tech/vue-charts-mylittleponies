@@ -14,7 +14,7 @@ ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
 
 async function apiData(){
-  const URL = "https://data.cityofnewyork.us/resource/25th-nujf.json?$query=SELECT%20brth_yr%2C%20gndr%2C%20ethcty%2C%20nm%2C%20cnt%2C%20rnk";
+  const URL = "https://data.cityofnewyork.us/resource/unse-x4pq.json";
 
   const response = await fetch(URL)
   const dataPoints = await response.json()
@@ -37,8 +37,12 @@ export default {
         responsive: true
       }
     }
-  }
-}
+  },
 
+  
+
+
+
+}
 
 </script>

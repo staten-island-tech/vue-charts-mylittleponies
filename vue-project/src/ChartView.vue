@@ -6,8 +6,8 @@ import BarChart from './components/BarChart.vue'
 <template>
 <button class="button-1" @click="showDropDown = !showDropDown">Change</button>
 <div id="myDropdown" class="dropdown-content" v-if="showDropDown">
-        <a><li> Female </li></a>
-        <a><li> Male </li></a>
+        <a class="dropDown"><li> Female </li></a>
+        <a class="dropDown"><li> Male </li></a>
       </div>
  <BarChart></BarChart>
 
@@ -15,6 +15,7 @@ import BarChart from './components/BarChart.vue'
 </template>
 
 <script>
+
 export default {
   name: 'App',
   components: { BarChart },
@@ -35,6 +36,11 @@ export default {
 </script>
 
 <style>
+
+.dropDown{
+  line-height: 20px;
+}
+
 .button-1 {
   background-color: #EA4C89;
   border-radius: 8px;
