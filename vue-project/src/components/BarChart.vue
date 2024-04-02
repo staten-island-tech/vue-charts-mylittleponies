@@ -27,6 +27,7 @@ export default {
       chartData: {
         labels: ['Native American', 'Asian', 'Black', 'Latinx', 'White', 'Multi Racial', 'Unknown'],
         datasets: [{
+          label: ['Dataset'],
           backgroundColor: ['#fb6f92', '#ff8fab', '#ffb3c6', '#ffc2d1', '#ffe5ec'],
           data: [this.nativeCount, this.asianCount, this.blackCount, this.latinxCount, this.whiteCount, this.multiCount, this.unknownCount]
         }]

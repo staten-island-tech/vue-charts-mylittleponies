@@ -40,10 +40,8 @@ export default {
       try {
         const response = await fetch('https://data.cityofnewyork.us/resource/unse-x4pq.json');
         const data = await response.json();
-        console.log('Raw data:', data);
 
         const firstObject = data[0];
-        console.log('First object:', firstObject);
 
         this.nativeCount = parseInt(firstObject.native_american.replace(',', ''));
         this.asianCount = parseInt(firstObject.asian.replace(',', ''));
