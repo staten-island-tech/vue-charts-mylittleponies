@@ -56,7 +56,9 @@ export default {
 
 <style>
 .api-data {
-  margin-top: 240px
+  margin-top: 240px;
+ 
+
 }
 
 .data-item {

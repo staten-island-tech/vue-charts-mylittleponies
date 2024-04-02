@@ -3,9 +3,15 @@ import PieChart from './components/PieGraph.vue'
 </script>
 
 <template>
-  <PieChart v-if= "loaded" 
-  :data = "chartData" 
-  :options = "options"
+  <PieChart 
+    v-if="loaded" 
+    :nativeCount="nativeCount" 
+    :asianCount="asianCount" 
+    :blackCount="blackCount" 
+    :latinxCount="latinxCount" 
+    :whiteCount="whiteCount" 
+    :multiCount="multiCount" 
+    :unknownCount="unknownCount"
   />
 <PieChart></PieChart>
 </template>
@@ -14,7 +20,7 @@ import PieChart from './components/PieGraph.vue'
 <script>
 
 export default {
-    name: 'App',
+    name: 'Pie',
     components: {
         PieChart
     },
@@ -22,40 +28,39 @@ export default {
   data() {
     return {
       loaded: false,
+      nativeCount: [],
       asianCount: [],
-      hispanicCount: [],
       blackCount: [],
+      latinxCount: [],
       whiteCount: [],
+      multiCount: [],
+      unknownCount: []
     }
 
   },
-    mounted: function (){
-      this.fetchData();
-    },
-    methods: {
-      fetchData: async function() {
-        this.loaded = false 
+  methods: {
+    async fetchData() {
+      this.loaded = false;
+      try {
+        const response = await fetch('https://data.cityofnewyork.us/resource/unse-x4pq.json');
+        const data = await response.json();
 
-        try{ 
-          const results =  await fetch('https://data.cityofnewyork.us/resource/unse-x4pq.json');
+        const sevenObject = data[7];
 
-          const data = await results.json();
-          let scores = data.results;
+        this.nativeCount = parseInt(sevenObject.native_american.replace(',', ''));
+        this.asianCount = parseInt(sevenObject.asian.replace(',', ''));
+        this.blackCount = parseInt(sevenObject.black.replace(',', ''));
+        this.latinxCount = parseInt(sevenObject.latinx.replace(',', ''));
+        this.whiteCount = parseInt(sevenObject.white.replace(',', ''));
+        this.multiCount = parseInt(sevenObject.multi_racial.replace(',', ''));
+        this.unknownCount = parseInt(sevenObject.unknown.replace(',', ''));
 
-          this.asianCount = data.filter(element => element.scores.includes ('Asian'))
-          this.hispanicCount = data.filter(element => element.scores.includes ('Hispanic'))
-          this.blackCount = data.filter(element => element.scores.includes('Black'))
-          this.whiteCount = data.filter(element => element.scores.includes('White'))
-
-          console.log(data);
-          this.loaded = true
-        } catch(error){
-          console.log(error);
-        }
+        this.loaded = true;
+      } catch (error) {
+        console.error(error);
       }
     }
-
-
+  }
 
   }
 
@@ -77,31 +82,7 @@ li{
     
 }
 
-.dropDown{
-  line-height: 20px;
-}
 
-.button-2 {
-  background-color: #EA4C89;
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 14px;
-  height: 40px;
-  margin: 0;
-  outline: none;
-  padding: 10px 16px;
-  width: 100px;
-  text-align: center;
-  transition: color 100ms;
-}
-
-.button-2:hover,
-.button-2:focus {
-  background-color: #F082AC;
-}
 </style>
 
 
