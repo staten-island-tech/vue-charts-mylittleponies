@@ -12,9 +12,7 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Iterate over each key-value pair in the item -->
             <template v-for="(value, key, itemIndex) in item">
-              <!-- Skip the first key-value pair in each object -->
               <template v-if="itemIndex !== 0">
                 <tr>
                   <td>{{ key }}</td>
