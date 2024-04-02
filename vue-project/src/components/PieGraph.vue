@@ -1,6 +1,8 @@
 <template>
-  <div class="pies">
-  <Pie :data="pieData" :options="pieOptions"/>
+  <div class="container">
+  <!-- <Pie :data="pieData" 
+  :options="pieOptions"
+  /> -->
   </div>
 </template>
 
@@ -8,6 +10,8 @@
 <script lang="ts">
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
 import { Pie } from 'vue-chartjs'
+import * as pieConfig from '../components/PieGraph.vue'
+
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -16,7 +20,7 @@ export default {
   name: 'PieChart',
   components: { Pie },
   data() {
-    return {
+    return { pieConfig,
         pieData: {
         labels: ['Native American','Asian', 'White', 'Black', 'Latinx', 'Multi-Racial'],
         datasets: [{ backgroundColor: ['#fb6f92', '#ff8fab', '#ffb3c6', '#ffc2d1', '#ffe5ec'],
@@ -24,7 +28,7 @@ export default {
     },  
     pieOptions: {
     responsive: true,
-    maintainAspectRatio: true,
+  
     }
     }
   },
@@ -33,7 +37,7 @@ export default {
     asianCount: Number,
     blackCount: Number,
     hispanicCount: Number,
-    whiteCount: Number
+    whiteCount: Number,
   },
 }
 
