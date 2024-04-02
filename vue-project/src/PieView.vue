@@ -1,7 +1,3 @@
-<script setup>
-import PieChart from './components/PieGraph.vue'
-</script>
-
 <template>
   <PieChart 
     v-if="loaded" 
@@ -13,30 +9,28 @@ import PieChart from './components/PieGraph.vue'
     :multiCount="multiCount" 
     :unknownCount="unknownCount"
   />
-<PieChart></PieChart>
 </template>
 
 
 <script>
+import PieChart from './components/PieGraph.vue';
+import { ref, onMounted } from 'vue';
 
 export default {
-    name: 'Pie',
-    components: {
-        PieChart
-    },
-    
+  components: {
+    PieChart
+  },
   data() {
     return {
       loaded: false,
-      nativeCount: [],
-      asianCount: [],
-      blackCount: [],
-      latinxCount: [],
-      whiteCount: [],
-      multiCount: [],
-      unknownCount: []
-    }
-
+      nativeCount: 0,
+      asianCount: 0,
+      blackCount: 0,
+      latinxCount: 0,
+      whiteCount: 0,
+      multiCount: 0,
+      unknownCount: 0
+    };
   },
   methods: {
     async fetchData() {
@@ -60,12 +54,13 @@ export default {
         console.error(error);
       }
     }
+  },
+  mounted() {
+    this.fetchData();
   }
-
-  }
-
-
+};
 </script>
+
 
 <style>
 
