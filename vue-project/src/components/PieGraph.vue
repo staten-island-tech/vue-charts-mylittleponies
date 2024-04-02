@@ -35,7 +35,8 @@ export default {
         labels: ['Native American', 'Asian', 'Black', 'Latinx', 'White', 'Multi Racial', 'Unknown'],
         datasets: [{
           backgroundColor: ['#fb6f92', '#ff8fab', '#ffb3c6', '#ffc2d1', '#ffe5ec'],
-          data: [0,1,2]
+          data: [254, 8565, 5714, 7142, 4734, 498, 762]
+          
         }]
       },
       pieOptions: {
