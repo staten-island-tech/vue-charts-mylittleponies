@@ -1,7 +1,8 @@
 <template>
-<h2> ネーム </h2>
 <div>
-<p> name - the core of one's identity</p>
+<h2> 試験 </h2>
+<p> test - a short written or spoken examination of a person's <br>proficiency or knowledge</p>
+<<img src="/testPic.jpg" alt="SHSAT" width="300" height="220">
 </div>
 </template>
 
@@ -24,9 +25,7 @@ onMounted(() => {
 
 <style>
 h2{
-    justify-content: center;
-}
-p{
+    margin-top: 0;
     justify-content: center;
 }
 </style>
