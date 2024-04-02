@@ -3,19 +3,10 @@ import PieChart from './components/PieGraph.vue'
 </script>
 
 <template>
-  <PieChart v-if= "loaded"
-  :asianCount = 'asianCount.length'
-  :hispanicCount = 'hispanicCount.length'
-  :blackCount = 'blackCount.length'
-  :whiteCount = 'whiteCount.length'
+  <PieChart v-if= "loaded" 
+  :data = "chartData" 
+  :options = "options"
   />
-<button class="button-2" @click="showDropDown = !showDropDown">Change</button>
-<div id="myDropdown" class="dropdown-content" v-if="showDropDown">
-        <a class="dropDown"><li> Hispanic </li></a>
-        <a class="dropDown"><li> White Non-Hispanic </li></a>
-        <a class="dropDown"><li> Black Non-Hispanic </li></a>
-        <a class="dropDown"><li> Asian & Pacific Islander </li></a>
-      </div>
 <PieChart></PieChart>
 </template>
 
@@ -30,7 +21,6 @@ export default {
     
   data() {
     return {
-      showDropDown: false,
       loaded: false,
       asianCount: [],
       hispanicCount: [],
